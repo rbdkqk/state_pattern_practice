@@ -8,4 +8,5 @@ module.exports = {
   },
   extends: ['plugin:@typescript-eslint/recommended'],
   ignorePatterns: ['.eslintrc.js'],
+  rules: { '@typescript-eslint/no-empty-interface': 'off' },
 };
