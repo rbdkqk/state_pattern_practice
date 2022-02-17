@@ -1,7 +1,7 @@
-import { CoursePageVM } from '../coursePage/CoursePageVM';
+import { OnlineStudyPageVM } from '../onlineStudyPage/OnlineStudyPageVM';
 import { makeAutoObservable } from 'mobx';
 
-export class StudentPageVMImpl implements CoursePageVM {
+export class StudentPageVMImpl implements OnlineStudyPageVM {
   constructor() {
     makeAutoObservable(this);
   }

@@ -1,12 +1,12 @@
 import { commonContext } from '../../CommonContext';
-import { CoursePageVMClassName } from '../pages/coursePage/CoursePageVM';
-import { CoursePageVMImpl } from '../pages/coursePage/CoursePageVMImpl';
+import { OnlineStudyPageVMClassName } from '../pages/onlineStudyPage/OnlineStudyPageVM';
+import { OnlineStudyPageVMImpl } from '../pages/onlineStudyPage/OnlineStudyPageVMImpl';
 import { StudentPageVMClassName } from '../pages/studentPage/StudentPageVM';
 import { StudentPageVMImpl } from '../pages/studentPage/StudentPageVMImpl';
 
 export const setViewModelModules = () => {
   const serviceLocator = commonContext().getServiceLocator();
 
-  serviceLocator.registFactory(CoursePageVMClassName, () => new CoursePageVMImpl());
+  serviceLocator.registFactory(OnlineStudyPageVMClassName, () => new OnlineStudyPageVMImpl());
   serviceLocator.registFactory(StudentPageVMClassName, () => new StudentPageVMImpl());
 };
