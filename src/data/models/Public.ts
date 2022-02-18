@@ -16,11 +16,9 @@ export class Public implements OnlineStudyStatus {
       return false;
     }
 
-    const {
-      maxStudentCount: maxCount,
-      currentStudentsCount: currentCount,
-      name,
-    } = this._onlineStudy.onlineStudyInfo;
+    const { maxStudentCount: maxCount, currentStudentsCount: currentCount } =
+      this._onlineStudy.onlineStudyInfo;
+
     if (currentCount === maxCount - 1) {
       this._onlineStudy.status = new Private(this._onlineStudy);
     }
