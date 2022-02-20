@@ -7,6 +7,7 @@ import { setViewModelModules } from './application/appModules/viewModels';
 import { setServiceModules } from './application/appModules/services';
 import { setRepositoryModules } from './application/appModules/repositories';
 import ErrorBoundary from './application/pages/errorBoundary/ErrorBoundary';
+import { BrowserRouter } from 'react-router-dom';
 
 AppStarter.initialize((commonContext) => {
   setRepositoryModules();
@@ -16,9 +17,11 @@ AppStarter.initialize((commonContext) => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
